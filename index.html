@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live QR/Barcode/AprilTag Scanner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Live QR/Barcode/AprilTag Scanner</h1>
+        <p>
+          Point your camera at a QR code, barcode, or AprilTag. Results will
+          appear in real time.
+        </p>
+      </header>
+
+      <section class="scanner">
+        <div class="scanner__video">
+          <video id="video" autoplay playsinline muted></video>
+          <canvas id="overlay" aria-hidden="true"></canvas>
+        </div>
+        <div class="scanner__controls">
+          <button id="toggle" class="btn" type="button">Start scanning</button>
+          <p class="status" id="status">Camera idle.</p>
+          <div class="result">
+            <h2>Detected ID</h2>
+            <p id="result">No data yet.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tips">
+        <h2>Tips</h2>
+        <ul>
+          <li>Use good lighting for faster detection.</li>
+          <li>Keep the code inside the frame for a few seconds.</li>
+          <li>Works best on mobile and modern desktop browsers.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
