@@ -1,0 +1,12 @@
+{
+  "name": "apriltag-demo",
+  "version": "1.0.0",
+  "description": "Webcam QR/barcode/AprilTag demo",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8080"
+  },
+  "dependencies": {
+    "jsqr": "^1.4.0"
+  }
+}
